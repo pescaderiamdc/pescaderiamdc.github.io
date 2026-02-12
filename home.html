@@ -54,11 +54,11 @@
             text-transform: uppercase;
         }
 
-        /* Hero / Inicio con Logo */
+        /* Hero / Inicio con Logo Principal */
         .hero {
-            height: 80vh;
-            background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), 
-                        url('C:/Users/brenn/OneDrive/Desktop/pescaderia.github.io/pescaderia.github.io/LOGO2.jpg') center/contain no-repeat;
+            height: 60vh;
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
+                        url('C:/Users/brenn/OneDrive/Desktop/pescaderiamdc.github.io/pescaderiamdc.github.io/LOGO2.jpeg') center/contain no-repeat;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -71,14 +71,47 @@
             font-size: 3.5rem;
             text-transform: uppercase;
             letter-spacing: 4px;
-            margin-bottom: 10px;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            font-weight: bold;
+        /* Sección de Menú con Fotos Actualizadas */
+        .seccion-menu {
+            padding: 80px 5%;
+            background-color: var(--gris-fondo);
+        }
+
+        .titulo-seccion {
+            text-align: center;
             color: var(--azul-mar);
-            letter-spacing: 2px;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        .galeria-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .item-menu {
+            background: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .item-menu:hover {
+            transform: translateY(-5px);
+            border-color: var(--azul-mar);
+        }
+
+        .item-menu img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Sección de Contacto Informativa */
@@ -98,39 +131,16 @@
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .info-item {
-            margin-bottom: 25px;
-        }
+        .info-item { margin-bottom: 25px; }
+        .info-item h3 { color: var(--oro); text-transform: uppercase; font-size: 0.9rem; margin-bottom: 5px; font-family: sans-serif; }
+        .info-item a { font-size: 1.4rem; color: white; text-decoration: none; transition: 0.3s; }
+        .info-item a:hover { color: var(--oro); }
 
-        .info-item h3 {
-            color: var(--oro);
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-            font-family: sans-serif;
-        }
-
-        .info-item p, .info-item a {
-            font-size: 1.4rem;
-            color: white;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .info-item a:hover {
-            color: var(--oro);
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.8rem;
-            color: #666;
-        }
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; color: #666; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .info-item p, .info-item a { font-size: 1.1rem; }
+            .hero h1 { font-size: 2.2rem; }
+            .info-item a { font-size: 1.1rem; }
         }
     </style>
 </head>
@@ -140,45 +150,39 @@
         <a href="#" class="logo-nav">MAR DE CORTEZ</a>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
-            <li><a href="file:///C:/Users/brenn/OneDrive/Desktop/pescaderia.github.io/pescaderia.github.io/menu.html">Menú</a></li>
+            <li><a href="file:///C:/Users/brenn/OneDrive/Desktop/pescaderiamdc.github.io/pescaderiamdc.github.io/menu.html">Menú</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
     <header id="inicio" class="hero">
         <h1>Pescadería Mar de Cortez</h1>
-        <p>CALIDAD, FRESCURA Y TRADICIÓN</p>
+        <p style="color: var(--azul-mar); font-weight: bold; letter-spacing: 2px;">DEL MAR A TU MESA</p>
     </header>
 
+    <section id="menu" class="seccion-menu">
+        <h2 class="titulo-seccion">Galería del Menú</h2>
+        <div class="galeria-menu">
+            <div class="item-menu"><img src="C:/Users/brenn/OneDrive/Desktop/pescaderiamdc.github.io/pescaderiamdc.github.io/IMG_0329.jpeg" alt="Especiales"></div>
+            <div class="item-menu"><img src="C:/Users/brenn/OneDrive/Desktop/pescaderiamdc.github.io/pescaderiamdc.github.io/IMG_0330.jpeg" alt="Combos"></div>
+            <div class="item-menu"><img src="C:/Users/brenn/OneDrive/Desktop/pescaderiamdc.github.io/pescaderiamdc.github.io/IMG_0331.jpeg" alt="Bebidas"></div>
+            <div class="item-menu"><img src="C:/Users/brenn/OneDrive/Desktop/pescaderiamdc.github.io/pescaderiamdc.github.io/IMG_0332.jpeg" alt="Platillos"></div>
+            <div class="item-menu"><img src="C:/Users/brenn/OneDrive/Desktop/pescaderiamdc.github.io/pescaderiamdc.github.io/IMG_0333.jpeg" alt="Camarones"></div>
+        </div>
+    </section>
+
     <section id="contacto" class="contacto">
-        <h2>Contacto y Redes Sociales</h2>
+        <h2>Contacto</h2>
         <div class="info-container">
-            
-            <div class="info-item">
-                <h3>Teléfono</h3>
-                <a href="tel:6264309700">626-430-9700</a>
-            </div>
-
-            <div class="info-item">
-                <h3>Correo Electrónico</h3>
-                <a href="mailto:aepescados@gmail.com">aepescados@gmail.com</a>
-            </div>
-
-            <div class="info-item">
-                <h3>Instagram</h3>
-                <a href="https://www.instagram.com/pescaderiamardecortez" target="_blank">@pescaderiamardecortez</a>
-            </div>
-
-            <div class="info-item">
-                <h3>TikTok</h3>
-                <a href="https://www.tiktok.com/@pescaderia_mar_de_cortez" target="_blank">@pescaderia_mar_de_cortez</a>
-            </div>
-
+            <div class="info-item"><h3>Teléfono</h3><a href="tel:6264309700">626-430-9700</a></div>
+            <div class="info-item"><h3>Correo</h3><a href="mailto:aepescados@gmail.com">aepescados@gmail.com</a></div>
+            <div class="info-item"><h3>Instagram</h3><a href="https://www.instagram.com/pescaderiamardecortez" target="_blank">@pescaderiamardecortez</a></div>
+            <div class="info-item"><h3>TikTok</h3><a href="https://www.tiktok.com/@pescaderia_mar_de_cortez" target="_blank">@pescaderia_mar_de_cortez</a></div>
         </div>
     </section>
 
     <footer>
-        <p>PESCADERÍA MAR DE CORTEZ &copy; 2026 | Del Mar a tu Mesa</p>
+        <p>PESCADERÍA MAR DE CORTEZ &copy; 2026</p>
     </footer>
 
 </body>
